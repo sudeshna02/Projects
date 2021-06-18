@@ -1,0 +1,129 @@
+Staff
+
+sid --1
+sfirstname --2
+smiddlename --3
+ssurname --4
+susername --5
+spass --6
+scontact --7
+semail --8
+squali --9
+meet_link --10
+srole --11
+sstatus --12
+
+pid --1
+pfirstname --2
+pmiddlename --3
+psurname --4
+pusername --5
+ppass --6
+pcontact --7
+pemail --8
+pstatus --9
+
+
+rid`,
+`crole`,
+`sid`, 
+`pid`, 
+`rfirstname`, 
+`rmiddlename`,
+ `rsurname`, 
+ `rcontact`,
+  `remail`, 
+  `rquali`, 
+  `rdesc`,
+   `approval`,
+    `status`, 
+    `made_at
+
+
+
+ bid
+cid
+sid
+btitle
+bcontent
+bimage
+bstatus
+created_at
+
+
+5 non login
+6 application
+
+
+                    'id' => $staff['sid'],
+                    'name' => $staff['sfirstname'],
+                    'middlename' => $staff['smiddlename'],
+                    'surname' => $staff['ssurname'],
+                    'usern' => $staff['susername'],
+                    'passw' => $staff['spass'],
+                    'contact' => $staff['scontact'],
+                    'email' => $staff['semail'],
+                    'role' => $staff['srole'],
+                    'status' => $staff['sstatus']
+
+
+ experiences
+
+eid
+pid
+sid
+etitle
+edesc
+estatus
+created_at
+
+
+                               
+                       <?php foreach($results as $res) { ?>
+                               <?php array_push($array2, $res['high_symp']); 
+                                  array_push($array3, $res['qid']); 
+                                  array_push($array9, $res['cid']); 
+                                  array_push($array4, $res['question']); 
+                                  array_push($array5, $res['ans_one']); 
+                                  array_push($array6, $res['ans_two']); 
+                                  array_push($array7, $res['ans_three']); 
+                              array_push($array8, $res['high_symp']); 
+
+                             } ?>
+                               
+                               
+                           <?php 
+                           for ($x=0; $x <10; $x++) { ?>
+                 
+                    <form method="post" action="<?php echo base_url();?>index.php/welcome/index">  
+                  
+           
+                      <?php if ($array2[$x]!=$array1[$x]) { 
+
+
+                        ?>
+
+
+                      
+                          <?php $score = $score + 0; ?>
+                           
+                      <?php } else { ?>
+                      
+                        
+                           
+                           <?php $score = $score + 1; ?>
+                      
+                    <?php } }
+
+                      $score = $score * 10;
+                        echo "you are" . $score . "% affected";
+                     ?>
+                    
+                    <br><br>
+                    
+                    <!-- <h2>Your Score: </h2>
+                      <h1><?= $score ?></h1> -->
+                    
+                    <input type="submit" value="Play Again!">
+                    
+                    </form>

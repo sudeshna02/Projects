@@ -1,0 +1,10 @@
+Copy MentalHealth in the xampp server 
+
+Import the database from the MentalHealth\details_and_database folder in http://localhost/phpmyadmin/
+The sql file is named as wellbeing.
+
+Run http://localhost/MentalHealth/
+
+View login details of admin, doctor, blogger and patient.
+
+Login into the system accordingly.

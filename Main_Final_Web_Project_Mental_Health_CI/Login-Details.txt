@@ -1,0 +1,19 @@
+Admin
+
+username: admin
+password: admin
+
+Doctor
+
+username: saral_doctor@wellbeing.com
+password: doctor
+
+Blogger
+
+username: rima_blogger@wellbeing.com
+password: blogger
+
+Patient
+
+username: isaac.thapa@wellbeing.com
+password: patient

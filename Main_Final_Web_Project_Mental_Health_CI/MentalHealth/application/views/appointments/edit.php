@@ -1,0 +1,160 @@
+<?php if(($this->session->userdata('role')) == '1') {?>
+<?php $this->load->view('layouts/userNav'); ?>
+
+
+        <!-- end of side bar -->
+        <div class="col-md-9 col-lg-10 py-5">
+          <!-- title row -->
+          <div class="row mb-5">
+            <div class="col">
+              <h3>
+                <span class="text-uppercase text-danger">Manage /</span
+                ><span class="text-muted small"> Appointment</span>
+                <span class="text-uppercase text-danger">/</span><span class="text-muted small"> Edit An Appointment <i class="bi bi-pencil"></i></span>
+              </h3>
+            </div>
+          </div>
+          <!-- end of title row -->
+
+<!-- Registeration Form -->
+            <div class="col-md-7 col-lg-10 w-75 m-auto">
+          <!--################## main content ################-->
+
+                    <form action="<?= base_url() ?>appointment/edit" method="POST" enctype="multipart/form-data">
+                    <div class="row w-80 m-2">
+
+                    <!-- User category -->
+                        <div class="input-group col-lg-3 mt-4">
+                            <span>
+                            <a class="text-muted"> Set Appointment For Meeting: </a>
+                            </span>
+                        </div>
+
+                        <div class="input-group col-lg-9 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="bi bi-list text-muted"></i>
+                                </span>
+                            </div>                               
+                                
+                            <select id="status" name="appmeet" class="form-control custom-select bg-white border-left-0 border-md" required>
+                            <?php foreach ($meetings as $meeting) { ?>
+                                <option value="<?= $meeting['mid'] ?>"><?= $meeting['mtitle'] ?></option>
+                            <?php }?>
+                            </select>
+
+                        </div>
+
+                        <!-- Category Name -a- -->
+                        <div class="input-group col-lg-3 mt-1">
+                            <span>
+                            <a class="text-muted"> Title: </a>
+                            </span>
+                        </div>
+
+                        <!-- Category Name -input- -->
+                        <div class="input-group col-lg-9 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="bi bi-tag-fill text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="name" type="text" name="apptitle" value="<?=$appointment['atitle'] ?>" placeholder="Title" class="form-control bg-white border-left-0 border-md" required>
+                        </div>
+
+                        <!-- Category Name -a- -->
+                        <div class="input-group col-lg-3 mt-4">
+                            <span>
+                            <a class="text-muted"> Description: </a>
+                            </span>
+                        </div>
+
+                        <!-- Category Name -input- -->
+                        <div class="input-group col-lg-9 mb-4">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="bi bi-tag-fill text-muted"></i>
+                                </span>
+                            </div>
+                            <textarea class="form-control bg-white border-left-0 border-md" value="<?=$appointment['adesc'] ?>" placeholder="<?=$appointment['adesc'] ?>" id="exampleFormControlTextarea1" name="appdesc" rows="6" required></textarea>
+                        </div>
+
+                    
+                        <!-- User category -->
+                        <div class="input-group col-lg-3 mt-4">
+                              <label for="example-date-input" class="col-2 col-form-label text-muted">Date:</label>
+                              </div>
+                              <div class="input-group col-lg-9 mb-4">
+                              <div class="col-12">
+                                <input class="form-control bg-white border-md" type="date" name="appdate" value="<?=$appointment['adate'] ?>" id="example-date-input">
+                              </div>
+                        </div>
+
+                        <!-- User category -->
+                        <div class="input-group col-lg-3 mt-4">
+                              <label for="example-date-input" class="col-2 col-form-label text-muted">Time:</label>
+                              </div>
+                              <div class="input-group col-lg-9 mb-4">
+                              <div class="col-12">
+                                <input class="form-control bg-white border-md" type="time" name="apptime" value="<?=$appointment['atime'] ?>" id="example-time-input">
+                              </div>
+                        </div>
+
+                        <!-- User category -->
+                        <div class="input-group col-lg-3 mt-4">
+                            <span>
+                            <a class="text-muted"> Set The Status: </a>
+                            </span>
+                        </div>
+
+                        <div class="input-group col-lg-9 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="bi bi-list text-muted"></i>
+                                </span>
+                            </div>
+                            
+                               
+                                
+                            <select id="status" name="appstatus" class="form-control custom-select bg-white border-left-0 border-md" required>
+                           
+                                <option value="1">Archive</option>
+                                <option value="2">Unarchive</option>
+                                
+              
+                            </select>
+
+                        </div>
+                        
+                        <div class="form-group col-lg-6 mx-auto mb-0 mt-4">
+                            <input class="btn btn-info btn-block btn-login py-2" type="hidden" value="<?=$appointment['aid'] ?>" name="id">
+                                
+                            <input class="btn btn-info btn-block btn-login py-2" type="submit" value="Edit" name="create">
+                        </div>
+
+                     </div>
+                 </form>
+
+        <!--################## main content ################-->
+            </div>
+
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+        </div>
+
+
+
+<?php $this->load->view('layouts/footer'); ?>
+
+<?php } else {
+  redirect('login');
+}

@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+/* GENERAL STYLES */
+:root {
+  --colourBlue: #38a3a5;
+  --colourBlack: #252627;
+  --colourWhite: #ffffff;
+  --colourGrey: #f8f9fa;
+  --colourLightPink: #FFE6EE;
+}
+
+body {
+  color: #000;
+  font-family: "Kaushan Script", cursive;
+  background: var(--colourWhite);
+  min-height: 100vh;
+}
+
+/* header */
+.white {
+  background: var(--colourWhite);
+}
+.header{
+  color:var(--colourBlue);
+  overflow: hidden;
+}
+.height-max{
+  min-height: 70vh;
+  background:url('../img/bcg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation-name: zoom;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2) translateX(-5%)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+.height-max-pat{
+  min-height: 40vh;
+  background:url('../img/bcg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation-name: zoom;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2) translateX(-5%)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+.text-color{
+  color: var(--colourBlue);
+}
+  
+/* about section */
+.about-img__container {
+  position: relative;
+}
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  top: -1.5rem;
+  left: -27.2px;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid;
+  z-index: -1;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+
+/* featured */
+
+.title-underline {
+  width: 12rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.title-underlinee {
+  width: 12rem;
+  height: 0.3rem;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.title-underline__center {
+  position: absolute;
+  height: 0.6rem;
+  background: var(--colourPink);
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.featured {
+  background: var(--colourWhite);
+}
+
+/*#############projects##########*/
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background: var(--colourPink);
+  opacity: 1;
+}
+
+.img-container img {
+  transition: all 1.5s ease-in-out;
+}
+
+.img-container:hover .project-image {
+  opacity: 0.5;
+  transform: scale(1.3);
+}
+
+
+/* admin nav-bar */
+
+.navbar {
+
+  border-top: 3px solid var(--colourPink);
+  border-bottom: 3px solid var(--colourPink); 
+  background-color: var(--colourGrey);
+
+}
+
+.navbar-brand {
+  color: var(--colourBlack);
+}
+
+.text-color {
+  color: var(--colourBlue);
+}
+
+.text-bg-color {
+  background-color: var(--colourBlue);
+}
+
+.navbar .nav-link,
+.navbar .icons {
+   color: var(--colourBlack);
+}
+
+.navbar .nav-link:hover,
+.navbar .icons:hover,
+.navbar-brand:hover {
+  color: var(--colourBlue);
+}
+
+.nav-item .nav-link,
+.nav-item .icons,
+.text-color:hover {
+   color: var(--colourBlack);
+}
+
+.nav-item .nav-link:hover,
+.nav-item .icons:hover,
+.nav-item .navbar-brand:hover {
+  color: var(--colourBlue);
+}
+
+.table-fixed {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.table-fixed thead th { position: sticky; top: 0; background: var(--colourLightPink);}
+
+/* https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body */
+
+
+.inform-card .card-1, .card-2, .card-3, .card-4{
+  background-color: var(--colourLightPink);
+}
+
+.inform-card .card .body-icon {
+
+  font-size: 60px;
+  transform: rotate(340deg);
+  color: var(--colourBlue);
+}
+
+.inform-card .card .fa, 
+.inform-card .card a {
+  color: var(--colourBlue);
+  text-decoration: none;
+}
+
+.inform-card .card .fa:hover, 
+.inform-card .card a:hover {
+  color: var(--colourBlack);
+}
+
+.inform-card .card {
+  color: var(--colourBlack);
+}
+
+.inform-card .card:hover {
+  color: var(--colourWhite);
+}
+
+.inform-card .card-footer {
+  background: var(--colourWhite);
+}
+
+.inform-card .card .user-icon {
+
+  font-size: 80px;
+  transform: rotate(340deg);
+  color: var(--colourBlue);
+}
+
+
+
+/* ################# Register And Login Page Styling CSS ############################ 
+ 
+  https://aestheticsjournal.com/feature/understanding-the-second-victim-in-complications
+  https://jsfiddle.net/bootstrapious/3j4a0Lps
+
+*/ 
+
+.signup{
+  min-height: 60vh;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.login{
+  min-height: 60vh;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+/*register and login form */
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+.border-md {
+    border-width: 2px;
+}
+
+/* for icons */
+.btn-facebook {
+    background: #405D9D;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #314879;
+}
+
+.btn-gmail {
+    background: #EA2D1E;
+    border: none;
+}
+
+.btn-login {
+    background: var(--colourBlue);
+    border: none;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background: var(--colourBlue);
+}
+
+.btn-gmail:hover, .btn-gmail:focus {
+    background: #EA1806;
+}
+
+.btn-twitter {
+    background: #42AEEC;
+    border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #1799e4;
+}
+
+/* ################# End of Register and Login Page Styling CSS ############################*/
+
+
+/* footer */
+.footer {
+  background: var(--colourBlue);
+}
+.footer-title {
+  border: 0.2rem solid var(--colourWhite);
+  padding: 0.4rem;
+}
+.footer-icon {
+  color: var(--colourWhite);
+}
+.footer-icon:hover {
+  color: var(--colourWhite);
+}
+
+.headerr{
+   clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+}
+.height-maxx{
+  min-height: 60vh;
+  background: var(--colourPink);
+  opacity: 0.5;
+}
+
+/* ################# Request Page Styling CSS ############################ 
+
+https://webdesignerwall.com/wdw-snippet/dual-design-registration-form
+*/
+
+/*requests background*/
+.request{
+    background: -webkit-linear-gradient(left, #C6E4E5, #38a3a5);
+    padding: 3%;
+}
+/*requests logo*/
+.request-left{
+    text-align: center;
+    color: #000;
+    margin-top: 4%;
+}
+
+/*requests logo animation*/
+.request-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 35%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/*requests logo bottom info*/
+.request-left p{
+    font-weight: lighter;
+    padding: 10%;
+    margin-top: -9%;
+}
+
+/*requests logo bottom login button*/
+.request-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+/*requests tab-content section*/
+.request-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+
+/* request tabs*/
+.request .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #3ec0c9;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.request .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.request .nav-tabs .nav-link:hover{
+    border: none;
+}
+.request .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+/* request form */
+.request .request-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+
+/* request form button */
+.btnRequest{
+    float: right;
+    margin-top: 5%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+/* request form button */
+.btnSubscribe{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: var(--colourBlue);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* request form heading */
+.request-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+
+/* ################# End of Request Page Styling CSS ############################*/
+
+
+/* ################# All BLOG Page Styling CSS ############################ 
+ 
+  https://aestheticsjournal.com/feature/understanding-the-second-victim-in-complications
+  https://jsfiddle.net/bootstrapious/3j4a0Lps
+
+*/ 
+
+/* GENERAL STYLES */
+:root {
+  --mainYellow: #fdbe02;
+  --mainWhite: #fff;
+  --mainBlack: #071013;
+  --mainGrey: #9b9999;
+  --TransGrey: rgba(0, 0, 0, 0.1);
+}
+
+/* blog categories */
+.categories-link {
+  color: var(--mainBlack);
+  text-decoration: none;
+}
+.categories-link:hover {
+  color: var(--mainGrey);
+  text-decoration: none;
+}
+.categories-underline {
+  height: 0.1rem;
+  width: 5rem;
+  background: var(--colourBlue);
+}
+.category-container {
+  position: relative;
+}
+.category-img {
+  transition: all 1s linear;
+}
+.category-container:hover .category-img {
+  opacity: 0.5;
+}
+.category-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.2rem 3rem 0.2rem 0.2rem;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  transition: all 1s linear;
+  text-decoration: none !important;
+}
+.category-link:hover {
+  color: var(--mainGrey);
+}
+.category-container:hover .category-link {
+  opacity: 1;
+}
+
+/* #######################Blog Cateogories############### */
+.blogs-categories-underline {
+  height: 0.2rem;
+  width: 5rem;
+  background: var(--colourBlue);
+}
+.blogs-categories-link {
+  color: var(--mainBlack);
+  text-decoration: none !important;
+}
+.blogs-categories-link:hover {
+  color: var(--mainGrey);
+}
+/* ##############END OF Categories #################### */
+
+/* blogs section */
+.blogs-container {
+  background: var(--TransGrey);
+  position: relative;
+  overflow: hidden;
+}
+.blogs-search-icon {
+  background: var(--mainWhite);
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 1.2rem;
+  transform: translateX(110%);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.blogs-container:hover .blogs-search-icon {
+  transform: translateX(0%);
+}
+.blogs-store-link {
+  background: var(--colourBlue);
+  color: var(--mainBlack);
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  transform: translateX(110%);
+  transition: all 1s ease-in-out;
+}
+.blogs-store-link:hover {
+  color: var(--mainBlack);
+}
+.blogs-container:hover .blogs-store-link {
+  transform: translateX(0%);
+}
+
+/* end of blog section */
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--colourBlue);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid var(--colourBlue);
+  margin-right: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.service-icon:hover {
+  background: var(--colourBlue);
+  color: var(--colourBlack);
+}
+
+.service-link{
+color: var(--colourBlue);
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: var(--colourBlack);
+   text-decoration: none;
+}
